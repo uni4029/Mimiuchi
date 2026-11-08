@@ -1,0 +1,15 @@
+# Xcode / SwiftPM
+build/
+DerivedData/
+.build/
+.swiftpm/
+*.xcuserstate
+xcuserdata/
+Packages/*/.build/
+.DS_Store
+*.profraw
+
+# Reference-data tooling (Tools/reference/README.md): never commit the Python venv or model weights
+Tools/reference/venv/
+Tools/reference/model-*/
+*.safetensors

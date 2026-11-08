@@ -1,0 +1,1052 @@
+{
+ "tokenizer": [
+  {
+   "text": "",
+   "ids": [],
+   "decoded": ""
+  },
+  {
+   "text": "Hello, world!",
+   "ids": [
+    7272,
+    44,
+    1675,
+    33
+   ],
+   "decoded": "Hello, world!"
+  },
+  {
+   "text": "会議は来週の月曜日に変更されました。",
+   "ids": [
+    52499,
+    50104,
+    56665,
+    50100,
+    54179,
+    53785,
+    50715
+   ],
+   "decoded": "会議は来週の月曜日に変更されました。"
+  },
+  {
+   "text": "The meeting has been rescheduled for next Monday.",
+   "ids": [
+    1100,
+    3560,
+    1330,
+    1166,
+    17631,
+    100,
+    48094,
+    1920,
+    6418,
+    46
+   ],
+   "decoded": "The meeting has been rescheduled for next Monday."
+  },
+  {
+   "text": "  leading and trailing spaces  ",
+   "ids": [
+    288,
+    21763,
+    48092,
+    34729,
+    5983,
+    288
+   ],
+   "decoded": "  leading and trailing spaces  "
+  },
+  {
+   "text": "multiple    spaces\tand\ttabs\nnew\nlines\r\nCRLF",
+   "ids": [
+    18523,
+    525,
+    21492,
+    9,
+    48299,
+    9,
+    26298,
+    10,
+    1327,
+    10,
+    6032,
+    522,
+    8414,
+    12583
+   ],
+   "decoded": "multiple    spaces\tand\ttabs\nnew\nlines\r\nCRLF"
+  },
+  {
+   "text": "aaaaaaa bbbb ccc!!!!!! ????",
+   "ids": [
+    45763,
+    32,
+    49656,
+    98,
+    32,
+    48395,
+    14330,
+    33,
+    32,
+    19251
+   ],
+   "decoded": "aaaaaaa bbbb ccc!!!!!! ????"
+  },
+  {
+   "text": "\n\n\n\n\n",
+   "ids": [
+    521,
+    10
+   ],
+   "decoded": "\n\n\n\n\n"
+  },
+  {
+   "text": "ーーーーー長音",
+   "ids": [
+    740,
+    50450,
+    50602
+   ],
+   "decoded": "ーーーーー長音"
+  },
+  {
+   "text": "絵文字😀👍🏽 and 𠮷野家 and \u0000\u0001 controls",
+   "ids": [
+    87291,
+    570,
+    573,
+    240,
+    159,
+    143,
+    189,
+    1561,
+    240,
+    160,
+    174,
+    183,
+    50702,
+    50240,
+    1561,
+    384,
+    385,
+    8887
+   ],
+   "decoded": "絵文字😀👍🏽 and 𠮷野家 and \u0000\u0001 controls"
+  },
+  {
+   "text": "Ünïcödé façade naïve café — “quotes” ‘single’ …",
+   "ids": [
+    3502,
+    110,
+    6105,
+    99,
+    1190,
+    5918,
+    2234,
+    1355,
+    3029,
+    1273,
+    6105,
+    1437,
+    2278,
+    3777,
+    1797,
+    1155,
+    46112,
+    747,
+    1584,
+    8337,
+    752,
+    2039
+   ],
+   "decoded": "Ünïcödé façade naïve café — “quotes” ‘single’ …"
+  },
+  {
+   "text": "中文简体：今天天气很好。繁體中文：今天天氣很好。",
+   "ids": [
+    100251,
+    58021,
+    50389,
+    50031,
+    100376,
+    50542,
+    59048,
+    55170,
+    51145,
+    50102,
+    61770,
+    59747,
+    100251,
+    50031,
+    100376,
+    50542,
+    63268,
+    55170,
+    51145,
+    50102
+   ],
+   "decoded": "中文简体：今天天气很好。繁體中文：今天天氣很好。"
+  },
+  {
+   "text": "한국어 문장입니다. Русский текст. العربية. हिन्दी. ภาษาไทย",
+   "ids": [
+    101705,
+    32,
+    101060,
+    101039,
+    101109,
+    101036,
+    101015,
+    104435,
+    1276,
+    1247,
+    103297,
+    32,
+    106567,
+    1291,
+    106562,
+    46,
+    103000,
+    107431,
+    103022,
+    1059,
+    106159,
+    106154,
+    106179,
+    106157,
+    106156,
+    1059,
+    102063,
+    102000,
+    102058,
+    102000,
+    102177
+   ],
+   "decoded": "한국어 문장입니다. Русский текст. العربية. हिन्दी. ภาษาไทย"
+  },
+  {
+   "text": "<|plamo:tag|>dataset<|plamo:msg|>translation<|plamo:tag|>input<|plamo:msg|>テスト<|plamo:tag|>output<|plamo:key|>lang<|plamo:val|>en<|plamo:msg|>",
+   "ids": [
+    16,
+    48472,
+    19,
+    22125,
+    16,
+    2225,
+    19,
+    51670,
+    16,
+    4160,
+    17,
+    1943,
+    18,
+    1109,
+    19
+   ],
+   "decoded": "<|plamo:tag|>dataset<|plamo:msg|>translation<|plamo:tag|>input<|plamo:msg|>テスト<|plamo:tag|>output<|plamo:key|>lang<|plamo:val|>en<|plamo:msg|>"
+  },
+  {
+   "text": "<|plamo:unknowntoken|> and <|plamo:bad token|> and <|plamo:|>",
+   "ids": [
+    60,
+    124,
+    112,
+    42029,
+    58,
+    17802,
+    4335,
+    124,
+    62,
+    48092,
+    316,
+    124,
+    112,
+    42029,
+    58,
+    5415,
+    6024,
+    124,
+    62,
+    1561,
+    60,
+    124,
+    112,
+    42029,
+    58,
+    124,
+    62
+   ],
+   "decoded": "<|plamo:unknowntoken|> and <|plamo:bad token|> and <|plamo:|>"
+  },
+  {
+   "text": "code: `for (int i = 0; i < n; ++i) { sum += a[i]; }`",
+   "ids": [
+    1999,
+    58,
+    352,
+    48303,
+    1186,
+    361,
+    317,
+    304,
+    59,
+    361,
+    316,
+    366,
+    48175,
+    716,
+    105,
+    48156,
+    3869,
+    48057,
+    353,
+    91,
+    105,
+    48294,
+    381,
+    96
+   ],
+   "decoded": "code: `for (int i = 0; i < n; ++i) { sum += a[i]; }`"
+  },
+  {
+   "text": "URL https://example.com/path?q=1&r=2#frag",
+   "ids": [
+    2727,
+    765,
+    4752,
+    1284,
+    1800,
+    63,
+    113,
+    61,
+    49,
+    38,
+    114,
+    61,
+    50,
+    35,
+    18955
+   ],
+   "decoded": "URL https://example.com/path?q=1&r=2#frag"
+  },
+  {
+   "text": "1234567890 3.14159 1,000,000 ¥1,000 $5.00 50%",
+   "ids": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    48,
+    307,
+    559,
+    52,
+    49,
+    53,
+    57,
+    305,
+    548,
+    48,
+    48,
+    548,
+    48,
+    48,
+    55777,
+    49,
+    548,
+    48,
+    48,
+    292,
+    53,
+    558,
+    48,
+    309,
+    48,
+    37
+   ],
+   "decoded": "1234567890 3.14159 1,000,000 ¥1,000 $5.00 50%"
+  },
+  {
+   "text": "　全角スペース　　　　です",
+   "ids": [
+    56241,
+    95201,
+    51190,
+    56241,
+    56241,
+    56241,
+    56241,
+    50225
+   ],
+   "decoded": "　全角スペース　　　　です"
+  },
+  {
+   "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "ids": [
+    44830,
+    44830,
+    44830,
+    44830,
+    44830,
+    44830,
+    44830,
+    44830,
+    44830,
+    44830,
+    44830,
+    42636
+   ],
+   "decoded": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  {
+   "text": "Emoji ZWJ 👨‍👩‍👧‍👦 flag 🇯🇵 keycap 1️⃣",
+   "ids": [
+    9536,
+    9501,
+    346,
+    73698,
+    32,
+    240,
+    159,
+    145,
+    168,
+    226,
+    128,
+    141,
+    657,
+    226,
+    128,
+    141,
+    240,
+    159,
+    145,
+    167,
+    226,
+    128,
+    141,
+    240,
+    159,
+    145,
+    166,
+    6313,
+    32,
+    987,
+    958,
+    1519,
+    2985,
+    305,
+    11731,
+    226,
+    131,
+    163
+   ],
+   "decoded": "Emoji ZWJ 👨‍👩‍👧‍👦 flag 🇯🇵 keycap 1️⃣"
+  }
+ ],
+ "prompts": [
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "会議は来週の月曜日に変更されました。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "prompt": "<|plamo:bos|><|plamo:tag|>dataset<|plamo:msg|>translation<|plamo:tag|>input<|plamo:msg|>会議は来週の月曜日に変更されました。<|plamo:tag|>output<|plamo:key|>lang<|plamo:val|>en<|plamo:msg|>",
+   "prompt_ids": [
+    1,
+    16,
+    48472,
+    19,
+    22125,
+    16,
+    2225,
+    19,
+    52499,
+    50104,
+    56665,
+    50100,
+    54179,
+    53785,
+    50715,
+    16,
+    4160,
+    17,
+    1943,
+    18,
+    1109,
+    19
+   ]
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "The meeting has been rescheduled for next Monday."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "prompt": "<|plamo:bos|><|plamo:tag|>dataset<|plamo:msg|>translation<|plamo:tag|>input<|plamo:msg|>The meeting has been rescheduled for next Monday.<|plamo:tag|>output<|plamo:key|>lang<|plamo:val|>ja<|plamo:msg|>",
+   "prompt_ids": [
+    1,
+    16,
+    48472,
+    19,
+    22125,
+    16,
+    2225,
+    19,
+    1100,
+    3560,
+    1330,
+    1166,
+    17631,
+    100,
+    48094,
+    1920,
+    6418,
+    46,
+    16,
+    4160,
+    17,
+    1943,
+    18,
+    1385,
+    19
+   ]
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "This system is convenient."
+     }
+    ],
+    "target_lang": "ja",
+    "form": "plain"
+   },
+   "prompt": "<|plamo:bos|><|plamo:tag|>dataset<|plamo:msg|>translation<|plamo:tag|>input<|plamo:msg|>This system is convenient.<|plamo:tag|>output<|plamo:key|>lang<|plamo:val|>ja<|plamo:key|>form<|plamo:val|>plain<|plamo:msg|>",
+   "prompt_ids": [
+    1,
+    16,
+    48472,
+    19,
+    22125,
+    16,
+    2225,
+    19,
+    1250,
+    1366,
+    48097,
+    9473,
+    46,
+    16,
+    4160,
+    17,
+    1943,
+    18,
+    1385,
+    17,
+    2105,
+    18,
+    15222,
+    19
+   ]
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "かみを切りました。"
+     }
+    ],
+    "target_lang": "en",
+    "context": "工作で折り紙を作っています。"
+   },
+   "prompt": "<|plamo:bos|><|plamo:tag|>dataset<|plamo:msg|>translation<|plamo:tag|>context<|plamo:msg|>工作で折り紙を作っています。<|plamo:tag|>input<|plamo:msg|>かみを切りました。<|plamo:tag|>output<|plamo:key|>lang<|plamo:val|>en<|plamo:msg|>",
+   "prompt_ids": [
+    1,
+    16,
+    48472,
+    19,
+    22125,
+    16,
+    3407,
+    19,
+    54006,
+    50107,
+    79069,
+    51923,
+    50189,
+    16,
+    2225,
+    19,
+    60413,
+    55778,
+    50170,
+    16,
+    4160,
+    17,
+    1943,
+    18,
+    1109,
+    19
+   ]
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "プロジェクトの管理画面を開いてください。"
+     }
+    ],
+    "target_lang": "en",
+    "glossary": [
+     {
+      "source": "管理画面",
+      "target": "dashboard"
+     },
+     {
+      "source": "プロジェクト",
+      "target": "project"
+     }
+    ]
+   },
+   "prompt": "<|plamo:bos|><|plamo:tag|>dataset<|plamo:msg|>translation<|plamo:tag|>glossary<|plamo:index|>管理画面<|plamo:item|>dashboard<|plamo:index|>プロジェクト<|plamo:item|>project<|plamo:tag|>input<|plamo:msg|>プロジェクトの管理画面を開いてください。<|plamo:tag|>output<|plamo:key|>lang<|plamo:val|>en<|plamo:msg|>",
+   "prompt_ids": [
+    1,
+    16,
+    48472,
+    19,
+    22125,
+    16,
+    44714,
+    1673,
+    20,
+    72211,
+    21,
+    18965,
+    20,
+    51408,
+    21,
+    4868,
+    16,
+    2225,
+    19,
+    51408,
+    50100,
+    72211,
+    61388,
+    50166,
+    16,
+    4160,
+    17,
+    1943,
+    18,
+    1109,
+    19
+   ]
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "Machine translation has improved dramatically.\n\nHowever, ambiguity remains a challenge, especially for short texts without context."
+     }
+    ],
+    "target_lang": "ja",
+    "source_lang": "en"
+   },
+   "prompt": "<|plamo:bos|><|plamo:tag|>dataset<|plamo:msg|>translation<|plamo:tag|>input<|plamo:key|>lang<|plamo:val|>en<|plamo:msg|>Machine translation has improved dramatically.\n\nHowever, ambiguity remains a challenge, especially for short texts without context.<|plamo:tag|>output<|plamo:key|>lang<|plamo:val|>ja<|plamo:msg|>",
+   "prompt_ids": [
+    1,
+    16,
+    48472,
+    19,
+    22125,
+    16,
+    2225,
+    17,
+    1943,
+    18,
+    1109,
+    19,
+    20876,
+    10041,
+    1127,
+    5844,
+    19333,
+    46,
+    519,
+    4580,
+    40059,
+    3835,
+    26651,
+    3381,
+    48094,
+    2076,
+    21732,
+    1342,
+    2537,
+    46,
+    16,
+    4160,
+    17,
+    1943,
+    18,
+    1385,
+    19
+   ]
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "今日はいい天気ですね。散歩に行きましょう。"
+     }
+    ],
+    "target_lang": "zh-hans"
+   },
+   "prompt": "<|plamo:bos|><|plamo:tag|>dataset<|plamo:msg|>translation<|plamo:tag|>input<|plamo:msg|>今日はいい天気ですね。散歩に行きましょう。<|plamo:tag|>output<|plamo:key|>lang<|plamo:val|>zh-hans<|plamo:msg|>",
+   "prompt_ids": [
+    1,
+    16,
+    48472,
+    19,
+    22125,
+    16,
+    2225,
+    19,
+    50672,
+    50415,
+    52854,
+    50282,
+    54539,
+    55569,
+    50817,
+    16,
+    4160,
+    17,
+    1943,
+    18,
+    5212,
+    45,
+    41383,
+    19
+   ]
+  }
+ ],
+ "generations": [
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "会議は来週の月曜日に変更されました。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    1100,
+    3560,
+    1330,
+    1166,
+    17631,
+    100,
+    48094,
+    1920,
+    6418,
+    46
+   ],
+   "text": "The meeting has been rescheduled for next Monday.",
+   "first": {
+    "top_ids": [
+     1100,
+     31980,
+     38439,
+     17089,
+     38870
+    ],
+    "top_logprobs": [
+     0.0,
+     -18.625,
+     -19.125,
+     -19.25,
+     -21.125
+    ]
+   },
+   "seconds": 1.093353271484375
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "The meeting has been rescheduled for next Monday."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    52499,
+    50104,
+    56665,
+    50100,
+    54179,
+    50106,
+    56920,
+    50715
+   ],
+   "text": "会議は来週の月曜日に延期されました。",
+   "first": {
+    "top_ids": [
+     52499,
+     57353,
+     70069,
+     60031,
+     100518
+    ],
+    "top_logprobs": [
+     -0.00093841552734375,
+     -7.375938415527344,
+     -8.500938415527344,
+     -9.375938415527344,
+     -11.750938415527344
+    ]
+   },
+   "seconds": 0.31720519065856934
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "This system is convenient."
+     }
+    ],
+    "target_lang": "ja",
+    "form": "plain"
+   },
+   "tokens": [
+    50137,
+    50470,
+    50104,
+    51435,
+    50417
+   ],
+   "text": "このシステムは便利だ。",
+   "first": {
+    "top_ids": [
+     50137,
+     71790,
+     61680,
+     100035,
+     75088
+    ],
+    "top_logprobs": [
+     0.0,
+     -17.875,
+     -18.75,
+     -19.0,
+     -19.75
+    ]
+   },
+   "seconds": 0.2501809597015381
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "かみを切りました。"
+     }
+    ],
+    "target_lang": "en",
+    "context": "工作で折り紙を作っています。"
+   },
+   "tokens": [
+    73,
+    2668,
+    1087,
+    2224,
+    46
+   ],
+   "text": "I cut the paper.",
+   "first": {
+    "top_ids": [
+     73,
+     11712,
+     22034,
+     30787,
+     33001
+    ],
+    "top_logprobs": [
+     -0.000316619873046875,
+     -8.250316619873047,
+     -11.125316619873047,
+     -11.250316619873047,
+     -12.250316619873047
+    ]
+   },
+   "seconds": 0.24213194847106934
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "プロジェクトの管理画面を開いてください。"
+     }
+    ],
+    "target_lang": "en",
+    "glossary": [
+     {
+      "source": "管理画面",
+      "target": "dashboard"
+     },
+     {
+      "source": "プロジェクト",
+      "target": "project"
+     }
+    ]
+   },
+   "tokens": [
+    3549,
+    1525,
+    1087,
+    1803,
+    24655,
+    46
+   ],
+   "text": "Please open the project dashboard.",
+   "first": {
+    "top_ids": [
+     3549,
+     3879,
+     33712,
+     8583,
+     32214
+    ],
+    "top_logprobs": [
+     -0.0097808837890625,
+     -4.6347808837890625,
+     -11.259780883789062,
+     -12.634780883789062,
+     -12.634780883789062
+    ]
+   },
+   "seconds": 0.2640359401702881
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "Machine translation has improved dramatically.\n\nHowever, ambiguity remains a challenge, especially for short texts without context."
+     }
+    ],
+    "target_lang": "ja",
+    "source_lang": "en"
+   },
+   "tokens": [
+    52684,
+    56096,
+    50104,
+    82289,
+    51427,
+    50433,
+    519,
+    50425,
+    50372,
+    86018,
+    51015,
+    55004,
+    52337,
+    57951,
+    82512,
+    73936,
+    71969,
+    56420,
+    51420,
+    55193
+   ],
+   "text": "機械翻訳は飛躍的に向上した。\n\nしかし、特に文脈のない短い文章においては、依然として曖昧さが課題となっている。",
+   "first": {
+    "top_ids": [
+     52684,
+     77442,
+     51986,
+     83510,
+     54982
+    ],
+    "top_logprobs": [
+     -2.6702880859375e-05,
+     -11.00002670288086,
+     -12.25002670288086,
+     -13.12502670288086,
+     -13.37502670288086
+    ]
+   },
+   "seconds": 0.6597628593444824
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "今日はいい天気ですね。散歩に行きましょう。"
+     }
+    ],
+    "target_lang": "zh-hans"
+   },
+   "tokens": [
+    100376,
+    50542,
+    59048,
+    55170,
+    51145,
+    68114,
+    50102,
+    100026,
+    53126,
+    54855,
+    54855,
+    56563,
+    64410,
+    50102
+   ],
+   "text": "今天天气很好呢。我们去散散步吧。",
+   "first": {
+    "top_ids": [
+     100376,
+     50542,
+     50286,
+     51077,
+     51804
+    ],
+    "top_logprobs": [
+     -0.0005359649658203125,
+     -7.75053596496582,
+     -9.62553596496582,
+     -10.50053596496582,
+     -12.75053596496582
+    ]
+   },
+   "seconds": 0.46321702003479004
+  }
+ ]
+}

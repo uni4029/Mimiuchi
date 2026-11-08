@@ -1,0 +1,23 @@
+Mimiuchi
+Copyright 2026 uni4029
+https://github.com/uni4029/Mimiuchi
+
+Licensed under the Apache License, Version 2.0 (see LICENSE), except for:
+
+- Code ported from Preferred Networks' PLaMo 3 Translate files (tokenizer, prompt format and
+  model code): Packages/PlamoKit/Sources/PlamoTokenizer/PlamoTokenizer.swift,
+  Packages/PlamoKit/Sources/PlamoTokenizer/PFML3Prompt.swift,
+  Packages/PlamoKit/Sources/PlamoKit/Model/Plamo3Model.swift and
+  Packages/PlamoKit/Sources/PlamoKit/Model/Plamo3Configuration.swift.
+  These are subject to the PLaMo Community License (Licenses/PLaMo-Community-License-ja.txt,
+  Licenses/PLaMo-Community-License-en.txt); see Packages/PlamoKit/NOTICE.md.
+- Reference and test data generated with PFN's official PLaMo 3 Translate runtime
+  (Tools/reference/*.json, Packages/PlamoKit/Tests/PlamoTokenizerTests/Resources/*.json).
+  These are outputs of PLaMo 3 Translate and are subject to the PLaMo Community License.
+- Third-party license texts in Licenses/, which are under their own terms.
+
+Built with PLaMo. PLaMo 3 Translate is provided by Preferred Networks, Inc. under the PLaMo
+Community License. Mimiuchi is not an official product of Preferred Networks.
+
+Portions follow mlx-lm (Copyright © 2023 Apple Inc., MIT License; Licenses/mlx-lm.txt).
+Mimiuchi links MLX Swift and other open-source software; see Licenses/README.md.

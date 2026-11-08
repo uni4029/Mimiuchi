@@ -1,0 +1,798 @@
+{
+ "generations": [
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "本日の会議資料を共有します。ご確認のほどよろしくお願いいたします。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    4820,
+    5346,
+    21540,
+    3560,
+    3785,
+    4043,
+    2427,
+    1180,
+    46
+   ],
+   "text": "I am sharing today's meeting materials. Please review them."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "このアプリはオフラインでも動作し、データは端末の外に送信されません。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    1250,
+    1714,
+    2378,
+    21190,
+    50115,
+    1192,
+    1455,
+    27214,
+    9325,
+    3322,
+    46
+   ],
+   "text": "This app works offline, and data is not transmitted outside the device."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "猫が窓辺で日向ぼっこをしている。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    1100,
+    3352,
+    48097,
+    37406,
+    20940,
+    4059,
+    1094,
+    1087,
+    3196,
+    46
+   ],
+   "text": "The cat is basking in the sun by the window."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "締め切りが迫っているので、今日中にレビューを終わらせてください。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    1100,
+    18419,
+    48097,
+    20385,
+    44,
+    1122,
+    3842,
+    5140,
+    1087,
+    2427,
+    24451,
+    1087,
+    1404,
+    46
+   ],
+   "text": "The deadline is approaching, so please finish the review by the end of the day."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "彼は医者になるために一生懸命勉強した。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    2084,
+    5681,
+    1915,
+    19357,
+    9469,
+    46
+   ],
+   "text": "He studied hard to become a doctor."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "東京駅から新大阪駅までは新幹線で約2時間30分です。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    1833,
+    2679,
+    1160,
+    306,
+    2343,
+    48092,
+    307,
+    48,
+    2253,
+    1094,
+    15098,
+    1308,
+    1465,
+    1097,
+    14649,
+    10030,
+    1089,
+    15098,
+    45,
+    68494,
+    10030,
+    46
+   ],
+   "text": "It takes about 2 hours and 30 minutes by Shinkansen from Tokyo Station to Shin-Osaka Station."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "申し訳ありませんが、その件については担当者から改めてご連絡いたします。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    73,
+    39,
+    109,
+    10871,
+    3084,
+    1885,
+    48096,
+    3815,
+    1152,
+    25311,
+    1115,
+    5015,
+    1090,
+    2965,
+    46
+   ],
+   "text": "I'm sorry, but the person in charge will get back to you regarding that matter."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "量子コンピュータは特定の問題を古典的なコンピュータより高速に解くことができる。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    43100,
+    13577,
+    1153,
+    8978,
+    2614,
+    2242,
+    18768,
+    9943,
+    13577,
+    46
+   ],
+   "text": "Quantum computers can solve certain problems faster than classical computers."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "雨が降りそうだから、傘を持って行ったほうがいいよ。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    1833,
+    14331,
+    2069,
+    5052,
+    9133,
+    21227,
+    1444,
+    3300,
+    1105,
+    32795,
+    46
+   ],
+   "text": "It looks like it's going to rain, so you should bring an umbrella."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "新機能のリリースは来月を予定しています。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    1286,
+    1834,
+    30850,
+    1087,
+    1117,
+    2495,
+    33787,
+    46
+   ],
+   "text": "We plan to release the new feature next month."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "Please make sure to back up your files before installing the update."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    54599,
+    85212,
+    53874,
+    51100,
+    52222,
+    50100,
+    58790,
+    55477,
+    50166
+   ],
+   "text": "アップデートをインストールする前に、必ずファイルのバックアップを取ってください。"
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "The quick brown fox jumps over the lazy dog."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    62793,
+    89867,
+    50105,
+    94223,
+    50220,
+    50100,
+    51889,
+    50103,
+    54694,
+    61830,
+    51507
+   ],
+   "text": "アマキツネが怠け者の犬を飛び越える。"
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "Our quarterly revenue grew by 12% year over year, driven by strong demand in Asia."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    53348,
+    50195,
+    73933,
+    50123,
+    51933,
+    71075,
+    50101,
+    51391,
+    50100,
+    50581,
+    62558,
+    62937,
+    50104,
+    61489,
+    58239,
+    51484,
+    49,
+    50,
+    37,
+    52262,
+    51347
+   ],
+   "text": "アジアでの旺盛な需要を背景に、当社の四半期売上高は前年同期比12%増となりました。"
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "If you have any questions, feel free to reach out to our support team."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    63796,
+    62647,
+    51722,
+    50603,
+    50867,
+    50147,
+    52023
+   ],
+   "text": "ご不明な点がございましたら、お気軽にサポートチームまでお問い合わせください。"
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "Machine learning models can inherit biases present in their training data."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    77442,
+    50588,
+    50116,
+    51520,
+    50503,
+    56859,
+    87849,
+    77068,
+    50127,
+    63467
+   ],
+   "text": "機械学習モデルは、学習データに含まれるバイアスを継承することがある。"
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "I'm running a little late, but I'll be there in ten minutes."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    50587,
+    55371,
+    55763,
+    50804,
+    49,
+    48,
+    50142,
+    50107,
+    63793,
+    51163
+   ],
+   "text": "ちょっと遅れちゃうけど、10分で着くよ。"
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "The museum is closed on Mondays and national holidays."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    56933,
+    50104,
+    54179,
+    50108,
+    54578,
+    50104,
+    76038,
+    50111
+   ],
+   "text": "博物館は月曜日と祝日は休館です。"
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "Swift is a powerful and intuitive programming language for Apple platforms."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    45425,
+    50116,
+    11163,
+    55295,
+    50745,
+    50100,
+    60056,
+    50107,
+    89299,
+    50123,
+    56689,
+    53485,
+    50111
+   ],
+   "text": "Swiftは、Appleプラットフォーム向けの強力で直感的なプログラミング言語です。"
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "She decided to take a gap year to travel around South America."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    57739,
+    76732,
+    50103,
+    85712,
+    50377,
+    49,
+    50573,
+    50100,
+    53753,
+    51120,
+    50660,
+    65617
+   ],
+   "text": "彼女は南米を旅するため、1年間の休学をすることにした。"
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "Click the button below to verify your email address."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    50892,
+    50100,
+    71454,
+    50101,
+    53616,
+    50100,
+    50317,
+    52556,
+    50166
+   ],
+   "text": "下記のボタンをクリックして、メールアドレスの確認を行ってください。"
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "Thank you for your patience while we resolve this issue."
+     }
+    ],
+    "target_lang": "zh-hans"
+   },
+   "tokens": [
+    50409,
+    232,
+    176,
+    162,
+    62534,
+    50455,
+    100026,
+    100289,
+    52801,
+    100072,
+    100378,
+    50167,
+    56640,
+    50263,
+    50190,
+    57713,
+    50102
+   ],
+   "text": "感谢您在我们解决此问题期间的耐心等待。"
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "明日の天気は晴れのち曇りでしょう。"
+     }
+    ],
+    "target_lang": "ko"
+   },
+   "tokens": [
+    101193,
+    101017,
+    32,
+    101301,
+    236,
+    148,
+    168,
+    101003,
+    32,
+    235,
+    167,
+    145,
+    101040,
+    101002,
+    32,
+    237,
+    157,
+    144,
+    101006,
+    234,
+    178,
+    160,
+    101166,
+    101036,
+    101015
+   ],
+   "text": "내일 날씨는 맑다가 흐리겠습니다."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "The conference will take place in Lyon next September."
+     }
+    ],
+    "target_lang": "fr"
+   },
+   "tokens": [
+    1881,
+    9806,
+    1151,
+    6753,
+    1171,
+    6459,
+    26799,
+    102750,
+    26297,
+    1132,
+    13355,
+    101,
+    4210,
+    1514,
+    9207,
+    46
+   ],
+   "text": "La conférence se tiendra à Lyon en septembre prochain."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "Please close the door when you leave the room."
+     }
+    ],
+    "target_lang": "de"
+   },
+   "tokens": [
+    66,
+    11005,
+    2678,
+    2962,
+    2332,
+    1109,
+    11745,
+    1451,
+    340,
+    1213,
+    114,
+    44,
+    103722,
+    11745,
+    2490,
+    35159,
+    1744,
+    11634,
+    1109,
+    46
+   ],
+   "text": "Bitte schließen Sie die Tür, wenn Sie das Zimmer verlassen."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "第一章では、研究の背景と目的について述べる。\n第二章では、関連研究を整理する。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    23753,
+    305,
+    18625,
+    3170,
+    48092,
+    14436,
+    50117,
+    2057,
+    46,
+    10,
+    23753,
+    306,
+    39916,
+    1087,
+    3452,
+    1927,
+    46
+   ],
+   "text": "Chapter 1 describes the background and objectives of the study.\nChapter 2 summarizes the related research."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "Error: the file could not be opened because you don't have permission to view it."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    55376,
+    58,
+    32,
+    52513,
+    64833,
+    75042,
+    52222,
+    68517,
+    53665
+   ],
+   "text": "エラー: 閲覧権限がないため、ファイルを開けませんでした。"
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "お世話になっております。先日ご依頼いただいた見積書を添付いたします。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    4882,
+    2771,
+    5969,
+    1589,
+    5466,
+    14439,
+    1087,
+    37440,
+    1115,
+    9055,
+    36425,
+    46
+   ],
+   "text": "Thank you for your continued support. I have attached the quotation you requested the other day."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "Photosynthesis converts light energy into chemical energy stored in glucose."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    50445,
+    55382,
+    50116,
+    50445,
+    66623,
+    58619,
+    50607,
+    50106,
+    74605,
+    51000,
+    54871,
+    52079,
+    67003,
+    50546
+   ],
+   "text": "光合成は、光エネルギーをグルコースに蓄えられた化学エネルギーに変換する。"
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "この度は弊社製品をご購入いただき、誠にありがとうございます。"
+     }
+    ],
+    "target_lang": "en"
+   },
+   "tokens": [
+    4882,
+    9427,
+    48094,
+    13002,
+    1157,
+    1718,
+    46
+   ],
+   "text": "Thank you very much for purchasing our product."
+  },
+  {
+   "case": {
+    "messages": [
+     {
+      "role": "user",
+      "content": "Turn left at the second traffic light and the station will be on your right."
+     }
+    ],
+    "target_lang": "ja"
+   },
+   "tokens": [
+    50,
+    66756,
+    56483,
+    50103,
+    51215,
+    50106,
+    83743,
+    50169,
+    82585,
+    50408,
+    50217
+   ],
+   "text": "2つ目の信号を左に曲がると、右手に駅があります。"
+  }
+ ]
+}
