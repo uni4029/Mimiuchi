@@ -1,4 +1,5 @@
 import AppKit
+import Carbon.HIToolbox
 import SwiftUI
 
 /// Floating panel that shows the selected text and its translation without activating the app
@@ -29,6 +30,18 @@ final class OverlayPanel: NSPanel {
 
     override var canBecomeKey: Bool { true }
     override var canBecomeMain: Bool { false }
+
+    override func sendEvent(_ event: NSEvent) {
+        // Text views can consume Escape before it reaches cancelOperation or SwiftUI.
+        // Handle it at the panel so dismissal does not depend on keyboard focus.
+        if event.type == .keyDown, event.keyCode == UInt16(kVK_Escape),
+            event.modifierFlags.intersection([.command, .option, .control, .shift]).isEmpty
+        {
+            cancelOperation(nil)
+            return
+        }
+        super.sendEvent(event)
+    }
 
     override func cancelOperation(_ sender: Any?) {
         close()
