@@ -67,6 +67,8 @@ Scripts/build.sh          # Release ビルドして ~/Applications/Mimiuchi.app 
 open ~/Applications/Mimiuchi.app
 ```
 
+ビルドの全ログは `build/DerivedData/build.log`（`DERIVED_DATA` を指定した場合はその直下）に保存されます。失敗時は末尾の詳細も表示されます。`missing Metal Toolchain` が出る場合は、`xcodebuild -downloadComponent MetalToolchain`、または Xcode の Settings > Components から Metal Toolchain をインストールしてください。
+
 Xcode で開く場合は `xcodegen generate` の後に `Mimiuchi.xcodeproj` を開き、スキーム Mimiuchi を実行します。Debug ビルドはバンドル ID が `local.mimiuchi.Mimiuchi.debug` で、権限と設定がインストール版とは別になります（Debug 版で権限を求めても、インストール版の許可は変わりません）。`Scripts/build.sh` は起動中の Mimiuchi を終了してから入れ替え、終わったら起動し直します。
 
 初回起動時の手順:

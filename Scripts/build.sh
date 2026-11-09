@@ -25,8 +25,19 @@ fi
 PREFIX_MAP="OTHER_CFLAGS=\$(inherited) \"-ffile-prefix-map=$DERIVED=/DerivedData\" \"-ffile-prefix-map=$PWD=/Mimiuchi\""
 
 command -v xcodegen >/dev/null && xcodegen generate --quiet
-xcodebuild -project Mimiuchi.xcodeproj -scheme Mimiuchi -configuration Release \
-  -destination 'platform=macOS,arch=arm64' -derivedDataPath "$DERIVED" "${EXTRA[@]}" "$PREFIX_MAP" build | tail -3
+mkdir -p "$DERIVED"
+BUILD_LOG="$DERIVED/build.log"
+if xcodebuild -project Mimiuchi.xcodeproj -scheme Mimiuchi -configuration Release \
+  -destination 'platform=macOS,arch=arm64' -derivedDataPath "$DERIVED" "${EXTRA[@]}" "$PREFIX_MAP" build >"$BUILD_LOG" 2>&1; then
+  tail -3 "$BUILD_LOG"
+else
+  BUILD_STATUS=$?
+  # Package resolution and compiler failures often explain the cause well before the
+  # final summary. Keep stdout and stderr together instead of discarding all but 3 lines.
+  tail -80 "$BUILD_LOG" >&2
+  echo "Build failed. Full log: $BUILD_LOG" >&2
+  exit "$BUILD_STATUS"
+fi
 
 APP="$DERIVED/Build/Products/Release/Mimiuchi.app"
 INSTALLED="$HOME/Applications/Mimiuchi.app"
