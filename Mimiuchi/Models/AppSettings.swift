@@ -17,6 +17,12 @@ enum OverlayPlacement: String, CaseIterable, Identifiable, Codable {
     }
 }
 
+enum OverlayLayout: String, CaseIterable, Identifiable, Codable {
+    case vertical, horizontal
+    var id: String { rawValue }
+    var label: String { self == .vertical ? "上下分割" : "左右分割" }
+}
+
 /// What the ⌘C+C shortcut opens.
 enum ShortcutPresentation: String, CaseIterable, Identifiable, Codable {
     case overlay, mainWindow
@@ -68,6 +74,8 @@ final class AppSettings {
     var doublePressInterval: Double { didSet { defaults.set(doublePressInterval, forKey: Keys.doublePressInterval) } }
     var shortcutPresentation: ShortcutPresentation { didSet { defaults.set(shortcutPresentation.rawValue, forKey: Keys.presentation) } }
     var overlayPlacement: OverlayPlacement { didSet { defaults.set(overlayPlacement.rawValue, forKey: Keys.placement) } }
+    var overlayShowsSource: Bool { didSet { defaults.set(overlayShowsSource, forKey: Keys.overlayShowsSource) } }
+    var overlayLayout: OverlayLayout { didSet { defaults.set(overlayLayout.rawValue, forKey: Keys.overlayLayout) } }
     var excludedApps: [ExcludedApp] { didSet { save(excludedApps, Keys.excludedApps) } }
 
     /// Default target language.
@@ -108,12 +116,15 @@ final class AppSettings {
             Keys.showDockIcon: true,
             Keys.saveHistory: true,
             Keys.glossaryEnabled: false,
+            Keys.overlayShowsSource: true,
         ])
         doubleCopyEnabled = defaults.bool(forKey: Keys.doubleCopyEnabled)
         shortcut = Self.load(DoublePressShortcut.self, Keys.shortcut, defaults) ?? .commandC
         doublePressInterval = defaults.double(forKey: Keys.doublePressInterval)
         shortcutPresentation = ShortcutPresentation(rawValue: defaults.string(forKey: Keys.presentation) ?? "") ?? .overlay
         overlayPlacement = OverlayPlacement(rawValue: defaults.string(forKey: Keys.placement) ?? "") ?? .nearSelection
+        overlayShowsSource = defaults.bool(forKey: Keys.overlayShowsSource)
+        overlayLayout = OverlayLayout(rawValue: defaults.string(forKey: Keys.overlayLayout) ?? "") ?? .vertical
         excludedApps = Self.load([ExcludedApp].self, Keys.excludedApps, defaults) ?? []
         primaryLanguage = defaults.string(forKey: Keys.primaryLanguage) ?? "ja"
         secondaryLanguage = defaults.string(forKey: Keys.secondaryLanguage) ?? "en"
@@ -154,6 +165,8 @@ final class AppSettings {
         static let doublePressInterval = "doublePressInterval"
         static let presentation = "shortcutPresentation"
         static let placement = "overlayPlacement"
+        static let overlayShowsSource = "overlayShowsSource"
+        static let overlayLayout = "overlayLayout"
         static let excludedApps = "excludedApps"
         static let primaryLanguage = "primaryLanguage"
         static let secondaryLanguage = "secondaryLanguage"

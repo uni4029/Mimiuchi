@@ -95,6 +95,11 @@ private struct ShortcutSettings: View {
                     ForEach(OverlayPlacement.allCases) { Text($0.label).tag($0) }
                 }
                 .disabled(settings.shortcutPresentation != .overlay)
+                Toggle("オーバーレイに原文を表示", isOn: $settings.overlayShowsSource)
+                Picker("オーバーレイの分割方向", selection: $settings.overlayLayout) {
+                    ForEach(OverlayLayout.allCases) { Text($0.label).tag($0) }
+                }
+                .disabled(!settings.overlayShowsSource)
             }
             Section("権限") {
                 PermissionRow(

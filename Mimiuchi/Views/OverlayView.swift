@@ -13,15 +13,26 @@ struct OverlayView: View {
         VStack(spacing: 0) {
             header
             Divider().opacity(0.6)
-            sourceSection
-            Divider().opacity(0.6)
-            translationSection
+            textPanes
             Divider().opacity(0.6)
             footer
         }
         .background(.regularMaterial)
         .ignoresSafeArea()
         .onExitCommand { controller.close() }
+    }
+
+    private var textPanes: some View {
+        let layout = model.settings.overlayLayout == .horizontal
+            ? AnyLayout(HStackLayout(spacing: 0)) : AnyLayout(VStackLayout(spacing: 0))
+        return layout {
+            if model.settings.overlayShowsSource {
+                sourceSection
+                Divider().opacity(0.6)
+            }
+            translationSection
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     // MARK: Header
@@ -89,7 +100,6 @@ struct OverlayView: View {
                 TextEditor(text: $session.sourceText)
                     .font(.system(size: 13))
                     .scrollContentBackground(.hidden)
-                    .frame(minHeight: 60, maxHeight: 140)
             } else {
                 ScrollView {
                     Text(session.sourceText)
@@ -98,12 +108,11 @@ struct OverlayView: View {
                         .textSelection(.enabled)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .frame(maxHeight: 92)
-                .fixedSize(horizontal: false, vertical: true)
             }
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 10)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
 
     // MARK: Translation
@@ -140,7 +149,7 @@ struct OverlayView: View {
             .padding(.vertical, 12)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .frame(maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     // MARK: Footer
