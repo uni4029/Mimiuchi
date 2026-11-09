@@ -35,6 +35,8 @@ final class TranslationSession {
         }
     }
     private(set) var translatedText = ""
+    /// Changes when a different document is opened, so both panes reset their scroll position.
+    private(set) var documentID = UUID()
     /// `nil` = automatic detection.
     var sourceLanguage: String? { didSet { if sourceLanguage != oldValue { retranslate() } } }
     var targetLanguage: String { didSet { if targetLanguage != oldValue { userPickedTarget = true; retranslate() } } }
@@ -81,6 +83,7 @@ final class TranslationSession {
 
     /// Replaces the whole content (used by ⌘C+C and history), translating immediately.
     func load(text: String, sourceLanguage: String? = nil, targetLanguage: String? = nil) {
+        documentID = UUID()
         task?.cancel()
         debounce?.cancel()
         suppressAutoTarget = true
@@ -98,6 +101,7 @@ final class TranslationSession {
     }
 
     func clear() {
+        documentID = UUID()
         task?.cancel()
         debounce?.cancel()
         sourceText = ""
@@ -116,6 +120,7 @@ final class TranslationSession {
         else { return }
         let newSource = targetLanguage
         let newText = translatedText
+        documentID = UUID()
         task?.cancel()
         debounce?.cancel()
         suppressAutoTarget = true

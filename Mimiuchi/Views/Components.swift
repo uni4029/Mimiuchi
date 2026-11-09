@@ -141,7 +141,8 @@ struct SourceTextEditor: View {
     @Binding var text: String
     var placeholder: String
     var fontSize: CGFloat = 20
-    @FocusState.Binding var focused: Bool
+    let scrollLink: ScrollLink
+    @Binding var focused: Bool
 
     var body: some View {
         ZStack(alignment: .topLeading) {
@@ -153,10 +154,7 @@ struct SourceTextEditor: View {
                     .padding(.vertical, 0)
                     .allowsHitTesting(false)
             }
-            TextEditor(text: $text)
-                .font(.system(size: fontSize))
-                .scrollContentBackground(.hidden)
-                .focused($focused)
+            LinkedTextEditor(text: $text, fontSize: fontSize, link: scrollLink, focused: $focused)
         }
     }
 }

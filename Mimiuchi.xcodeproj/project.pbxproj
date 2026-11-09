@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C829C4724ED84A7C87A9B1C3 /* SynchronizedScrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E27B1A558A74466A93C48A1 /* SynchronizedScrolling.swift */; };
 		061BCC794690B0FACE54471E /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65110C55196583C318D242B /* HistoryStore.swift */; };
 		0FF776BBDCB0DCC61B7133CC /* OverlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE41E455AB4C7CE6262ED5CA /* OverlayController.swift */; };
 		17267C4A29CB8C28F1090191 /* HistoryGlossaryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E491F024B3DFFBF771668BB4 /* HistoryGlossaryViews.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E27B1A558A74466A93C48A1 /* SynchronizedScrolling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizedScrolling.swift; sourceTree = "<group>"; };
 		0BDBF865B2571C28DE601A0D /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		18CE7974A2F62135C6F96B5E /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		211845C2937A73EFECA0122A /* MimiuchiCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MimiuchiCore; path = Packages/MimiuchiCore; sourceTree = SOURCE_ROOT; };
@@ -126,6 +128,7 @@
 				F22F267311C92F37005BE25B /* OnboardingView.swift */,
 				2156CAB22D2E3857B7115272 /* OverlayView.swift */,
 				FF867551274CC7AD1A84C590 /* SettingsView.swift */,
+				1E27B1A558A74466A93C48A1 /* SynchronizedScrolling.swift */,
 				3305DB118C8DA70A8C7A0C36 /* TermsOfUseView.swift */,
 				6799A2BCB23C4B59B2E5D195 /* TranslatorView.swift */,
 			);
@@ -264,6 +267,7 @@
 				0FF776BBDCB0DCC61B7133CC /* OverlayController.swift in Sources */,
 				17B4D225BEEC84C9FF662821 /* OverlayView.swift in Sources */,
 				708FECC6D80B9CF4C34FEC61 /* SettingsView.swift in Sources */,
+				C829C4724ED84A7C87A9B1C3 /* SynchronizedScrolling.swift in Sources */,
 				4B271C82A051501DDA9FC5D6 /* SnapshotRunner.swift in Sources */,
 				BE8129152E4D5974BB929080 /* TermsOfUseView.swift in Sources */,
 				A766856E1A24C4653A316513 /* TranslationSession.swift in Sources */,

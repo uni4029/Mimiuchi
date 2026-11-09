@@ -100,6 +100,8 @@ private struct ShortcutSettings: View {
                     ForEach(OverlayLayout.allCases) { Text($0.label).tag($0) }
                 }
                 .disabled(!settings.overlayShowsSource)
+                Text("原文と訳文のスクロールは、各画面の「スクロール連動」ボタンで連動できます。")
+                    .font(.caption).foregroundStyle(.secondary)
             }
             Section("権限") {
                 PermissionRow(

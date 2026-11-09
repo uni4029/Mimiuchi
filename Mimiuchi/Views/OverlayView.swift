@@ -8,6 +8,8 @@ struct OverlayView: View {
     @Environment(AppModel.self) private var model
     @State private var pinned = false
     @State private var sourceExpanded = false
+    @State private var editorFocused = false
+    @State private var scrollLink = ScrollLink()
 
     var body: some View {
         VStack(spacing: 0) {
@@ -20,6 +22,14 @@ struct OverlayView: View {
         .background(.regularMaterial)
         .ignoresSafeArea()
         .onExitCommand { controller.close() }
+        .onAppear { updateScrollLink() }
+        .onChange(of: model.settings.overlayScrollSync) { _, _ in updateScrollLink() }
+        .onChange(of: model.settings.overlayShowsSource) { _, _ in updateScrollLink() }
+        .onChange(of: session.documentID) { _, _ in scrollLink.reset() }
+    }
+
+    private func updateScrollLink() {
+        scrollLink.setEnabled(model.settings.overlayScrollSync && model.settings.overlayShowsSource)
     }
 
     private var textPanes: some View {
@@ -88,7 +98,10 @@ struct OverlayView: View {
                     .font(.system(size: 10))
                     .foregroundStyle(.tertiary)
                     .monospacedDigit()
-                Button(sourceExpanded ? "折りたたむ" : "編集") { sourceExpanded.toggle() }
+                Button(sourceExpanded ? "完了" : "編集") {
+                    sourceExpanded.toggle()
+                    editorFocused = sourceExpanded
+                }
                     .buttonStyle(.link)
                     .font(.system(size: 10))
             }
@@ -97,11 +110,9 @@ struct OverlayView: View {
                     .font(.system(size: 13))
                     .foregroundStyle(.secondary)
             } else if sourceExpanded {
-                TextEditor(text: $session.sourceText)
-                    .font(.system(size: 13))
-                    .scrollContentBackground(.hidden)
+                LinkedTextEditor(text: $session.sourceText, fontSize: 13, link: scrollLink, focused: $editorFocused)
             } else {
-                ScrollView {
+                LinkedScrollContent(link: scrollLink, pane: .source) {
                     Text(session.sourceText)
                         .font(.system(size: 13))
                         .foregroundStyle(.secondary)
@@ -118,7 +129,7 @@ struct OverlayView: View {
     // MARK: Translation
 
     private var translationSection: some View {
-        ScrollView {
+        LinkedScrollContent(link: scrollLink, pane: .translation) {
             VStack(alignment: .leading, spacing: 6) {
                 if case .failed(let message) = session.phase {
                     Label(message, systemImage: "exclamationmark.triangle.fill")
@@ -156,6 +167,9 @@ struct OverlayView: View {
 
     private var footer: some View {
         HStack(spacing: 2) {
+            ScrollSyncButton(enabled: Binding(
+                get: { model.settings.overlayScrollSync }, set: { model.settings.overlayScrollSync = $0 }))
+                .disabled(!model.settings.overlayShowsSource)
             CopyButton(text: session.translatedText)
             PaneIconButton(systemImage: "speaker.wave.2", help: "読み上げ") {
                 model.speech.speak(session.translatedText, languageCode: session.targetLanguage)

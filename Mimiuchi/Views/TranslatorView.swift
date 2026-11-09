@@ -49,8 +49,9 @@ struct TranslatorView: View {
 struct TextTranslatorPanel: View {
     @Bindable var session: TranslationSession
     @Environment(AppModel.self) private var model
-    @FocusState private var editorFocused: Bool
+    @State private var editorFocused = false
     @State private var showContext = false
+    @State private var scrollLink = ScrollLink()
 
     var body: some View {
         VStack(spacing: 10) {
@@ -79,7 +80,12 @@ struct TextTranslatorPanel: View {
                 .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.primary.opacity(0.1)))
             }
         }
-        .onAppear { editorFocused = true }
+        .onAppear {
+            editorFocused = true
+            scrollLink.setEnabled(model.settings.mainScrollSync)
+        }
+        .onChange(of: model.settings.mainScrollSync) { _, enabled in scrollLink.setEnabled(enabled) }
+        .onChange(of: session.documentID) { _, _ in scrollLink.reset() }
     }
 
     // MARK: Language bar
@@ -121,6 +127,8 @@ struct TextTranslatorPanel: View {
                     .help("文体（です・ます調 / だ・である調）")
                 }
                 glossaryToggle
+                ScrollSyncButton(enabled: Binding(
+                    get: { model.settings.mainScrollSync }, set: { model.settings.mainScrollSync = $0 }))
                 PaneIconButton(systemImage: "text.bubble", help: "コンテキストを追加", active: showContext || !session.context.isEmpty) {
                     showContext.toggle()
                 }
@@ -161,6 +169,7 @@ struct TextTranslatorPanel: View {
                 SourceTextEditor(
                     text: $session.sourceText,
                     placeholder: "翻訳するには、テキストを入力するか貼り付けてください。\n\n\(model.settings.shortcut.displayString) で、どのアプリからでも翻訳できます。",
+                    scrollLink: scrollLink,
                     focused: $editorFocused)
                     .padding(.leading, 14)
                     .padding(.trailing, 34)
@@ -193,7 +202,7 @@ struct TextTranslatorPanel: View {
 
     private var targetPane: some View {
         VStack(alignment: .leading, spacing: 0) {
-            ScrollView {
+            LinkedScrollContent(link: scrollLink, pane: .translation) {
                 VStack(alignment: .leading, spacing: 8) {
                     if case .failed(let message) = session.phase {
                         Label(message, systemImage: "exclamationmark.triangle.fill")
@@ -218,6 +227,7 @@ struct TextTranslatorPanel: View {
                 .padding(.top, 14)
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             HStack(spacing: 4) {
                 if session.isBusy {
                     ProgressView().controlSize(.small).padding(.trailing, 4)

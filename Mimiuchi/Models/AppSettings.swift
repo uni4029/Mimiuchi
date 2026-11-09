@@ -76,6 +76,8 @@ final class AppSettings {
     var overlayPlacement: OverlayPlacement { didSet { defaults.set(overlayPlacement.rawValue, forKey: Keys.placement) } }
     var overlayShowsSource: Bool { didSet { defaults.set(overlayShowsSource, forKey: Keys.overlayShowsSource) } }
     var overlayLayout: OverlayLayout { didSet { defaults.set(overlayLayout.rawValue, forKey: Keys.overlayLayout) } }
+    var overlayScrollSync: Bool { didSet { defaults.set(overlayScrollSync, forKey: Keys.overlayScrollSync) } }
+    var mainScrollSync: Bool { didSet { defaults.set(mainScrollSync, forKey: Keys.mainScrollSync) } }
     var excludedApps: [ExcludedApp] { didSet { save(excludedApps, Keys.excludedApps) } }
 
     /// Default target language.
@@ -125,6 +127,8 @@ final class AppSettings {
         overlayPlacement = OverlayPlacement(rawValue: defaults.string(forKey: Keys.placement) ?? "") ?? .nearSelection
         overlayShowsSource = defaults.bool(forKey: Keys.overlayShowsSource)
         overlayLayout = OverlayLayout(rawValue: defaults.string(forKey: Keys.overlayLayout) ?? "") ?? .vertical
+        overlayScrollSync = defaults.bool(forKey: Keys.overlayScrollSync)
+        mainScrollSync = defaults.bool(forKey: Keys.mainScrollSync)
         excludedApps = Self.load([ExcludedApp].self, Keys.excludedApps, defaults) ?? []
         primaryLanguage = defaults.string(forKey: Keys.primaryLanguage) ?? "ja"
         secondaryLanguage = defaults.string(forKey: Keys.secondaryLanguage) ?? "en"
@@ -167,6 +171,8 @@ final class AppSettings {
         static let placement = "overlayPlacement"
         static let overlayShowsSource = "overlayShowsSource"
         static let overlayLayout = "overlayLayout"
+        static let overlayScrollSync = "overlayScrollSync"
+        static let mainScrollSync = "mainScrollSync"
         static let excludedApps = "excludedApps"
         static let primaryLanguage = "primaryLanguage"
         static let secondaryLanguage = "secondaryLanguage"
